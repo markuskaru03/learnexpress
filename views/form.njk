@@ -2,39 +2,39 @@
 {% block title%}form{% endblock %}
 {% block content %}
     <h1>Form</h1>
-    <form>
+    <form action="/answers">
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" placeholder="Write you name"></div>
+            <input name="name" type="text" class="form-control" id="name" placeholder="Write you name"></div>
             <div class="mb-3">
                 <label for="bio" class="form-label">Bio</label>
                 <textarea class="form-control" id="bio" rows="3"></textarea>
             </div>
             <div class="mb-3">
             <label for="age" class="form-label">Age</label>
-            <input type="number" min="0" max="1000" class="form-control" id="age" placeholder="Write you age">
+            <input name="number" min="0" max="1000" class="form-control" id="age" placeholder="Write you age">
             </div>
             <div class="mb-3">
             <label for="bday" class="form-label">Birth date</label>
-            <input type="date" class="form-control" id="age" placeholder="Write you birth date">
+            <input name="bday" type="date" class="form-control" id="age" placeholder="Write you birth date">
             </div>
             <div class="mb-3">
             <label for="favcolor" class="form-label">Favourite color</label>
-            <input type="color" min="0" max="1000" class="form-control" id="favcolor">
+            <input name="favcolor" type="color" min="0" max="1000" class="form-control" id="favcolor">
             </div>
              <div class="mb-3">
             <label for="cool" class="form-label">Did you be cool?</label>
-            <input type="checkbox" min="0" max="1000" class="form-check-input" id="cool">
+            <input name="cool" type="checkbox" min="0" max="1000" class="form-check-input" id="cool">
             </div>
              <div class="mb-3">
                 <p>Choose your quest</p>
-                <input name="quest" type="radio" class="form-check-input" id="swallow">
+                <input name="quest" type="radio" class="form-check-input" id="swallow" value="swallow">
                 <label for="swallow" class="form-label">To figure out the airspeed velocity of an unladen swallow</label>
-                <input name="quest" type="radio" class="form-check-input" id="holygrail">
+                <input name="quest" type="radio" class="form-check-input" id="holygrail" value="holygrail">
                 <label for="holygrail" class="form-label">seek the holy grail</label>
-                <input name="quest" type="radio" class="form-check-input" id="grail">
+                <input name="quest" type="radio" class="form-check-input" id="grail" value="grail">
                 <label for="grail" class="form-label">seek the grail</label>
-                <input name="quest" type="radio" class="form-check-input" id="assyria">
+                <input name="quest" type="radio" class="form-check-input" id="assyria" value="assyria">
                 <label for="assyria" class="form-label">find the capital of Assyria</label>
                 <input name="quest" type="radio" class="form-check-input" id="cool">
                 
@@ -42,11 +42,11 @@
                  </div>
              <div class="mb-3">
                 <p>Food order</p>
-                <input name="food" type="checkbox" class="form-check-input" id="Sandwich">
+                <input name="food" type="checkbox" class="form-check-input" id="Sandwich" value="Sandwich">
                 <label for="Sandwich" class="form-label">Sandwich</label>
-                <input name="food" type="checkbox" class="form-check-input" id="Booze">
+                <input name="food" type="checkbox" class="form-check-input" id="Booze" value="Booze">
                 <label for="Booze" class="form-label">Booze</label>
-                <input name="food" type="checkbox" class="form-check-input" id="Chocolate">
+                <input name="food" type="checkbox" class="form-check-input" id="Chocolate" value="Chocolate">
                 <label for="Chocolate" class="form-label">Chocolate</label>
 
                     </div>
