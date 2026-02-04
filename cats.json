@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Senjöör Auster",
+    "birthyear": 1899,
+    "gender": "Female",
+    "color": "Black",
+    "eyes": "Black",
+    "spayed": true,
+    "id": 1
+  },
+  {
+    "name": "Auster",
+    "birthyear": 2006,
+    "gender": "Male",
+    "color": "",
+    "eyes": "",
+    "id": 2,
+    "spayed": false
+  },
+  {
+    "name": "Fränk222",
+    "birthyear": 2024,
+    "gender": "Female",
+    "color": "white",
+    "eyes": "gray",
+    "id": 3,
+    "spayed": false
+  },
+  {
+    "id": 4,
+    "name": "Kreisi",
+    "birthyear": 2023,
+    "gender": "Male",
+    "color": "black",
+    "eyes": "yellow",
+    "spayed": true
+  },
+  {
+    "id": 5,
+    "name": "Skibidi",
+    "birthyear": 2024,
+    "gender": "Male",
+    "color": "red",
+    "eyes": "white",
+    "spayed": false
+  },
+  {
+    "name": "Suomalainen Sisu",
+    "birthyear": 1999,
+    "color": "white",
+    "eyes": "blue",
+    "id": 6,
+    "spayed": false
+  },
+  {
+    "name": "Rootsi",
+    "birthyear": 1979,
+    "gender": "Male",
+    "color": "White",
+    "eyes": "Red",
+    "spayed": true,
+    "id": 7
+  },
+  {
+    "name": "Pärl",
+    "birthyear": 2020,
+    "gender": "Male",
+    "color": "Orange",
+    "eyes": "Yellow",
+    "id": 8,
+    "spayed": false
+  },
+  {
+    "name": "Selver",
+    "birthyear": 2011,
+    "gender": "Male",
+    "color": "White",
+    "eyes": "Orange",
+    "id": 9,
+    "spayed": false
+  }
+]
