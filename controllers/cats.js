@@ -6,8 +6,16 @@ import { prisma } from "../lib/prisma.js";
 const router = express.Router();
 
 router.get('', async (req, res) => {
-  let cats = await prisma.cat.findMany();
-  res.render('cats/index.njk', {cats});
+  let count = await prisma.cat.count();
+  let perPage = 10;
+  let pages = Math.ceil(count / perPage);
+  let currentPage = parseInt(req.query.page ?? 1);
+  let skip = perPage * (currentPage-1);
+  let cats = await prisma.cat.findMany({
+    take: perPage,
+    skip: skip,
+  });
+  res.render('cats/index.njk', { cats, pages });
 });
 
 router.get('/create', (req, res) => {
