@@ -1,4 +1,5 @@
 import express from 'express';
+import bcrypt from 'bcryptjs';
 import { prisma } from "../lib/prisma.js";
 const router = express.Router();
 
@@ -11,11 +12,12 @@ router.post("/register", async (req, res) => {
         where: { email: req.body.email },
     });
 if(!user && req.body.password === req.body.password_confirm ) {
+  const salt = bcrypt.genSaltSync(12);
 await prisma.user.create({
   data: {
     name: req.body.name,
     email: req.body.email,
-    password: req.body.password
+    password: bcrypt.hashSync(req.body.password, salt),
   },
 }); 
   res.redirect('/login');
@@ -32,7 +34,7 @@ router.post("/login", async (req, res) => {
   let user = await prisma.user.findUnique({
         where: { email: req.body.email },
     });
-    if(user && user.password === req.body.password){
+    if(user && bcrypt.compareSync(req.body.password, user.password)){
         req.session.userID = user.id;
         req.session.save();
         res.redirect('/cats');
